@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#81D4FA
-">
+    android:background="@color/Content">
 
     <android.support.v7.widget.CardView
         android:layout_width="0dp"
@@ -82,27 +81,49 @@
 
             <TextView
                 android:id="@+id/txvTelefone"
-                android:layout_width="0dp"
+                android:layout_width="126dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="12dp"
                 android:text="+55 79 99909-6312"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivIcoTel"
                 app:layout_constraintTop_toBottomOf="@+id/txvEmail" />
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="55dp"
-                android:layout_height="65dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
                 android:scaleType="centerCrop"
+                android:src="@drawable/name"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.111"
-                android:src="@drawable/name" />
+                app:layout_constraintVertical_bias="0.111" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/txvTelefone"
+                app:layout_constraintTop_toBottomOf="@+id/txvEmail"
+                android:src="@drawable/id2" />
+
+            <TextView
+                android:id="@+id/tvIdModel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+                android:text="123456"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toBottomOf="@+id/txvEmail" />
 
         </android.support.constraint.ConstraintLayout>
 

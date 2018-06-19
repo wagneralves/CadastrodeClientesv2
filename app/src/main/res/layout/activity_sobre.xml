@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
-    android:background="@color/Content"
     android:layout_height="match_parent">
 
 
@@ -53,7 +52,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/tvSobreTitulo"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/background_light"
+            android:textColor="@color/cardview_light_background"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView14"
@@ -87,7 +86,7 @@
         android:gravity="center_horizontal"
         android:text="@string/tvSobreCopyRight"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/cardview_dark_background"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +101,7 @@
         android:text="@string/tvSobreDireitos"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/cardview_dark_background"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

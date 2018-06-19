@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -33,6 +34,7 @@ public class ListarActivity extends AppCompatActivity {
     //ImageView ivFoto, ivMail, ivTel;
 
     SQLiteCursor c;
+    TextView tvIdModel;
     OutputStream out;
     android.app.AlertDialog.Builder msg;
     Intent it;
@@ -41,6 +43,7 @@ public class ListarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar);
+        tvIdModel = findViewById(R.id.tvIdModel);
 
         BancoController crud = new BancoController(getBaseContext());
         final Cursor cursor = crud.carregaDados();
@@ -48,8 +51,8 @@ public class ListarActivity extends AppCompatActivity {
       /*  String[] nomeCampos = new String[] {criaBanco.ID, criaBanco.NOME, criaBanco.TEL, criaBanco.CPF, criaBanco.DATA, criaBanco.DES, criaBanco.EMAIL, criaBanco.OBS};
         int[] idViews = new int[] {R.id.txvID, R.id.txvNome, R.id.txvTelefone, R.id.txvCPF, R.id.txvDATA, R.id.txvDescricao, R.id.txvEmail, R.id.txvObs};
 */
-        String[] nomeCampos = new String[] {DBTableConfig.Columns.NOME, DBTableConfig.Columns.TEL,DBTableConfig.Columns.EMAIL, DBTableConfig.Columns.CPF, DBTableConfig.Columns.DATA, DBTableConfig.Columns.DES, DBTableConfig.Columns.OBS};
-        int[] idViews = new int[] {R.id.txvNome, R.id.txvTelefone, R.id.txvEmail};
+        String[] nomeCampos = new String[] {DBTableConfig.Columns.NOME, DBTableConfig.Columns.TEL,DBTableConfig.Columns.EMAIL, DBTableConfig.Columns.ID, DBTableConfig.Columns.CPF, DBTableConfig.Columns.DATA, DBTableConfig.Columns.DES, DBTableConfig.Columns.OBS};
+        int[] idViews = new int[] {R.id.txvNome, R.id.txvTelefone, R.id.txvEmail, R.id.tvIdModel };
 
         final SimpleCursorAdapter adaptador = new SimpleCursorAdapter(getBaseContext(),
                 R.layout.listar_model,cursor,nomeCampos,idViews, 0);
