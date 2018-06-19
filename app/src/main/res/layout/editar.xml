@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:gravity="top"
+        android:background="#F5F5F5"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:id="@+id/alterar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/imageView9"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginEnd="37dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/imageView9"
+            android:layout_toStartOf="@+id/imageView9"
+            android:layout_weight="0.33"
+            android:onClick="AtualizarClick"
+            android:src="@drawable/ab_atualizar" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView9"
+            android:src="@drawable/ab_descartar"
+            android:onClick="ApagarClick"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.33" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/IB_Cancelar"
+            android:layout_above="@+id/tableLayout"
+            android:layout_centerHorizontal="true"
+            android:onClick="ListarClientes2"
+            android:src="@drawable/ab_cancelar"
+            android:layout_weight="0.33"
+            android:layout_gravity="center_vertical|right"
+            android:focusable="false"
+            android:layout_marginRight="5dp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNome"
+        android:hint="@string/tvEditarNome"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="49dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtTelefone"
+        android:hint="@string/TXTTelefoneCadastro"
+        android:numeric="integer"
+        android:phoneNumber="true"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/txtNome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <br.com.wagner.cadastrodeclientes.CpfEditText android:id="@+id/txtCpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/CPFHINT"
+        android:layout_below="@+id/txtEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:id="@+id/txtEmail"
+        android:hint="@string/tvEditarEmail"
+        android:layout_below="@+id/txtTelefone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/txtDescricao"
+        android:hint="@string/txtDescricaoCadastro"
+        android:layout_alignTop="@+id/chooseDateButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/chooseDateButton"
+        android:src="@drawable/calendario"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/txtCpf"
+        android:layout_toLeftOf="@+id/txvDate"
+        android:layout_toStartOf="@+id/txvDate"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="14dp" />
+
+    <TextView
+        android:id="@+id/txvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtDescricao"
+        android:layout_alignParentEnd="true"
+        android:hint="Nascimento"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:gravity="top"
+        android:background="#F5F5F5"
+        android:weightSum="1"
+        android:id="@+id/linearLayout2"
+        android:baselineAligned="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/linearLayout"
+        android:layout_toStartOf="@+id/linearLayout"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ivIcoMail"
+            android:src="@drawable/ab_editar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="left|center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tvEditarTitulo"
+            android:id="@+id/textView5"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold|italic" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtObs"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtDescricao"
+        android:ems="10"
+        android:hint="@string/obs"
+        android:inputType="textMultiLine" />
+
+</RelativeLayout>

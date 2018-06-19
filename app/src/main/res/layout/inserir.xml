@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:gravity="top"
+        android:background="#F5F5F5"
+        android:weightSum="1"
+        android:id="@+id/linearLayout4"
+        android:baselineAligned="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView12"
+            android:layout_above="@+id/tableLayout"
+            android:layout_centerHorizontal="true"
+            android:onClick="CadastrarClick"
+            android:src="@drawable/ab_salvar"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginRight="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ivIcoTel"
+            android:layout_below="@+id/txtDescricao"
+            android:layout_toRightOf="@+id/linearLayout3"
+            android:layout_toEndOf="@+id/linearLayout3"
+            android:src="@drawable/ab_cancelar"
+            android:onClick="ListaClientes"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical|right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="top"
+        android:background="#F5F5F5"
+        android:weightSum="1"
+        android:id="@+id/linearLayout3"
+        android:baselineAligned="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/linearLayout4"
+        android:layout_toStartOf="@+id/linearLayout4"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView6"
+            android:src="@drawable/abs__"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="left|center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tvInserir_Titulo"
+            android:id="@+id/textView6"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords|textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNome"
+        android:hint="@string/txtNomeCadastro"
+        android:autoText="false"
+        android:capitalize="words"
+        android:elegantTextHeight="true"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtTelefone"
+        android:hint="@string/TXTTelefoneCadastro"
+        android:numeric="integer"
+        android:phoneNumber="true"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/txtNome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress|textAutoComplete"
+        android:ems="10"
+        android:id="@+id/txtEmail"
+        android:hint="@string/TXTEmailCadastro"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/txtTelefone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <br.com.wagner.cadastrodeclientes.CpfEditText android:id="@+id/txtCpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/CPFHINT"
+        android:layout_below="@+id/txtEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/txtDescricao"
+        android:hint="@string/txtDescricaoCadastro"
+        android:layout_alignTop="@+id/chooseDateButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txvDate"
+        android:hint="Nascimento"
+        android:layout_alignTop="@+id/chooseDateButton"
+        android:layout_alignRight="@+id/linearLayout4"
+        android:layout_alignEnd="@+id/linearLayout4"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="5dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/chooseDateButton"
+        android:src="@drawable/calendario"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/txtCpf"
+        android:layout_toLeftOf="@+id/txvDate"
+        android:layout_toStartOf="@+id/txvDate"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="14dp" />
+
+    <EditText
+        android:id="@+id/edtObs"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtDescricao"
+        android:ems="10"
+        android:hint="@string/obs"
+        android:inputType="textMultiLine" />
+
+
+</RelativeLayout>
+
