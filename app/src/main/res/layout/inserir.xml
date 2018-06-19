@@ -1,182 +1,178 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
-        android:gravity="top"
-        android:background="#F5F5F5"
-        android:weightSum="1"
-        android:id="@+id/linearLayout4"
-        android:baselineAligned="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="3dp">
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageView12"
-            android:layout_above="@+id/tableLayout"
-            android:layout_centerHorizontal="true"
-            android:onClick="CadastrarClick"
-            android:src="@drawable/ab_salvar"
-            android:layout_gravity="left|center_vertical"
-            android:layout_marginRight="15dp" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/ivIcoTel"
-            android:layout_below="@+id/txtDescricao"
-            android:layout_toRightOf="@+id/linearLayout3"
-            android:layout_toEndOf="@+id/linearLayout3"
-            android:src="@drawable/ab_cancelar"
-            android:onClick="ListaClientes"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center_vertical|right" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:gravity="top"
-        android:background="#F5F5F5"
-        android:weightSum="1"
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
         android:baselineAligned="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/linearLayout4"
-        android:layout_toStartOf="@+id/linearLayout4"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="3dp">
+        android:gravity="top"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
+            android:id="@+id/imageView12"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/imageView6"
-            android:src="@drawable/abs__"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="left|center_vertical" />
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="CadastrarClick"
+            android:src="@drawable/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivIcoTel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="ListaClientes"
+            android:src="@drawable/cancelar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="@string/tvInserir_Titulo"
-            android:id="@+id/textView6"
-            android:layout_gravity="left|center_vertical"
-            android:layout_marginLeft="5dp"
-            android:textStyle="bold|italic" />
-    </LinearLayout>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textCapWords|textPersonName"
-        android:ems="10"
         android:id="@+id/txtNome"
-        android:hint="@string/txtNomeCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:autoText="false"
         android:capitalize="words"
         android:elegantTextHeight="true"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/linearLayout4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:ems="10"
+        android:hint="@string/txtNomeCadastro"
+        android:inputType="textCapWords|textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
         android:id="@+id/txtTelefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
         android:hint="@string/TXTTelefoneCadastro"
+        android:inputType="number"
         android:numeric="integer"
         android:phoneNumber="true"
-        android:layout_marginTop="32dp"
-        android:layout_below="@+id/txtNome"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress|textAutoComplete"
-        android:ems="10"
         android:id="@+id/txtEmail"
-        android:hint="@string/TXTEmailCadastro"
-        android:layout_marginTop="36dp"
-        android:layout_below="@+id/txtTelefone"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <br.com.wagner.cadastrodeclientes.CpfEditText android:id="@+id/txtCpf"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/TXTEmailCadastro"
+        android:inputType="textEmailAddress|textAutoComplete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefone" />
+
+    <br.com.wagner.cadastrodeclientes.CpfEditText
+        android:id="@+id/txtCpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/CPFHINT"
-        android:layout_below="@+id/txtEmail"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp" />
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
         android:id="@+id/txtDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
         android:hint="@string/txtDescricaoCadastro"
-        android:layout_alignTop="@+id/chooseDateButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:inputType="textPostalAddress"
+        app:layout_constraintEnd_toStartOf="@+id/chooseDateButton"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
     <TextView
+        android:id="@+id/txvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/txvDate"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="30dp"
         android:hint="Nascimento"
-        android:layout_alignTop="@+id/chooseDateButton"
-        android:layout_alignRight="@+id/linearLayout4"
-        android:layout_alignEnd="@+id/linearLayout4"
-        android:layout_marginTop="9dp"
-        android:layout_marginRight="5dp" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
     <ImageView
+        android:id="@+id/chooseDateButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/chooseDateButton"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/calendario"
-        android:layout_marginTop="34dp"
-        android:layout_below="@+id/txtCpf"
-        android:layout_toLeftOf="@+id/txvDate"
-        android:layout_toStartOf="@+id/txvDate"
-        android:layout_marginRight="5dp"
-        android:layout_marginEnd="14dp" />
+        app:layout_constraintEnd_toStartOf="@+id/txvDate"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
     <EditText
         android:id="@+id/edtObs"
-        android:layout_width="match_parent"
-        android:layout_height="101dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/obs"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescricao" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
 

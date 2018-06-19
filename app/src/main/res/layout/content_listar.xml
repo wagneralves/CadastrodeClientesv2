@@ -24,10 +24,10 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginTop="8dp"
             android:onClick="CadastroClientes"
-            android:src="@drawable/ab_novo"
+            android:src="@drawable/add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView15"
             app:layout_constraintTop_toTopOf="parent" />
@@ -37,12 +37,12 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginStart="2dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginTop="8dp"
             android:onClick="Sobre"
-            android:src="@drawable/icone"
+            android:src="@drawable/sobre"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView13"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -50,24 +50,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="@string/tvLIstarTitulo"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView14"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.555" />
 
         <ImageView
             android:id="@+id/imageView15"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginTop="8dp"
             android:onClick="Backup1"
-            android:src="@drawable/backup"
+            android:src="@drawable/bkp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toTopOf="parent" />
@@ -77,12 +79,12 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginTop="8dp"
             android:onClick="Restore1"
             android:src="@drawable/restore"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView13"
+            app:layout_constraintEnd_toStartOf="@+id/imageView14"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -90,7 +92,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginTop="8dp"
             android:onClick="Doe"
             android:src="@drawable/doe"
@@ -103,10 +105,10 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginTop="8dp"
             android:onClick="Compartilhar"
-            android:src="@drawable/compartilhe"
+            android:src="@drawable/compartilhar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView16"
             app:layout_constraintTop_toTopOf="parent" />
@@ -117,10 +119,12 @@
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
             android:onClick="ApagarTudo"
-            android:src="@drawable/problema"
+            android:src="@drawable/deletatudo"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 
