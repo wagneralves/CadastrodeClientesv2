@@ -1,187 +1,186 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout5"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
-        android:gravity="top"
-        android:background="#F5F5F5"
-        android:weightSum="1"
-        android:layout_alignParentTop="true"
-        android:id="@+id/linearLayout"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="5dp"
-        android:layout_alignParentRight="true"
-        android:baselineAligned="false">
-
-        <ImageView
-            android:id="@+id/alterar"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignTop="@+id/imageView9"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginEnd="37dp"
-            android:layout_marginRight="10dp"
-            android:layout_toLeftOf="@+id/imageView9"
-            android:layout_toStartOf="@+id/imageView9"
-            android:layout_weight="0.33"
-            android:onClick="AtualizarClick"
-            android:src="@drawable/ab_atualizar" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageView9"
-            android:src="@drawable/ab_descartar"
-            android:onClick="ApagarClick"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="10dp"
-            android:layout_weight="0.33" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/IB_Cancelar"
-            android:layout_above="@+id/tableLayout"
-            android:layout_centerHorizontal="true"
-            android:onClick="ListarClientes2"
-            android:src="@drawable/ab_cancelar"
-            android:layout_weight="0.33"
-            android:layout_gravity="center_vertical|right"
-            android:focusable="false"
-            android:layout_marginRight="5dp" />
-
-    </LinearLayout>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtNome"
-        android:hint="@string/tvEditarNome"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="49dp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/txtTelefone"
-        android:hint="@string/TXTTelefoneCadastro"
-        android:numeric="integer"
-        android:phoneNumber="true"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/txtNome"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <br.com.wagner.cadastrodeclientes.CpfEditText android:id="@+id/txtCpf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="@string/CPFHINT"
-        android:layout_below="@+id/txtEmail"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:id="@+id/txtEmail"
-        android:hint="@string/tvEditarEmail"
-        android:layout_below="@+id/txtTelefone"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="43dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
-        android:id="@+id/txtDescricao"
-        android:hint="@string/txtDescricaoCadastro"
-        android:layout_alignTop="@+id/chooseDateButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:id="@+id/chooseDateButton"
-        android:src="@drawable/calendario"
-        android:layout_marginTop="34dp"
-        android:layout_below="@+id/txtCpf"
-        android:layout_toLeftOf="@+id/txvDate"
-        android:layout_toStartOf="@+id/txvDate"
-        android:layout_marginRight="5dp"
-        android:layout_marginEnd="14dp" />
 
     <TextView
         android:id="@+id/txvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtDescricao"
-        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
         android:hint="Nascimento"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
-        android:gravity="top"
-        android:background="#F5F5F5"
-        android:weightSum="1"
+    <EditText
+        android:id="@+id/txtNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/tvEditarNome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <EditText
+        android:id="@+id/txtTelefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/TXTTelefoneCadastro"
+        android:inputType="number|phone"
+        android:numeric="integer"
+        android:phoneNumber="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+    <br.com.wagner.cadastrodeclientes.CpfEditText
+        android:id="@+id/txtCpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/CPFHINT"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/tvEditarEmail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefone" />
+
+    <EditText
+        android:id="@+id/txtDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/txtDescricaoCadastro"
+        android:inputType="textMultiLine|textPostalAddress"
+        app:layout_constraintEnd_toStartOf="@+id/chooseDateButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
+
+    <ImageView
+        android:id="@+id/chooseDateButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/calendario"
+        app:layout_constraintEnd_toStartOf="@+id/txvDate"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
+
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
         android:baselineAligned="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/linearLayout"
-        android:layout_toStartOf="@+id/linearLayout"
-        android:layout_marginTop="3dp"
-        android:layout_marginLeft="5dp">
+        android:gravity="top"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/alterar"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/ivIcoMail"
-            android:src="@drawable/ab_editar"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="8dp"
-            android:layout_gravity="left|center_vertical" />
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:onClick="AtualizarClick"
+            android:src="@drawable/restore"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:onClick="ApagarClick"
+            android:src="@drawable/excluir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/IB_Cancelar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/IB_Cancelar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:onClick="ListarClientes2"
+            android:src="@drawable/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/tvEditarTitulo"
-            android:id="@+id/textView5"
-            android:layout_gravity="left|center_vertical"
-            android:layout_marginLeft="5dp"
-            android:textStyle="bold|italic" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
     <EditText
         android:id="@+id/edtObs"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/obs"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescricao" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

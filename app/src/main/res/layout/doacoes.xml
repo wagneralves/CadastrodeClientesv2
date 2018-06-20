@@ -23,7 +23,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
             android:onClick="Obrigado"
             android:src="@drawable/ok_semfundo"
@@ -35,9 +35,10 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:text="@string/tvDoacoesTitulo"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/background_light"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,72 +78,52 @@
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/ivBit"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:onClick="copiar"
         android:scaleType="centerCrop"
         android:src="@drawable/bitcoin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/ivDoge"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:onClick="copiar"
         android:scaleType="centerCrop"
         android:src="@drawable/doge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="38dp"
-        android:text="1DXWX9oA3PAgqTkuzfJEFX5mshSvCYsn6i "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintEnd_toStartOf="@+id/ivEth"
+        app:layout_constraintStart_toEndOf="@+id/ivBit"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/ivCartBit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="52dp"
-        android:text="DHQ9uFbUCubn82zXcaxVC1TQ3zhpQ9u4U2"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Clique para copiar o endereço"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDoge" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/ivEth"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:onClick="copiar"
         android:src="@drawable/etherium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="55dp"
-        android:text="0x4Ff98202D5fe16703486cDc456cC95A8309d73fe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
 </android.support.constraint.ConstraintLayout>
