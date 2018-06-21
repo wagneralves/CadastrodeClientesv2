@@ -7,22 +7,23 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class ExibeContato extends Activity {
 
-    TextView exNome, exTelefone, exEmail, exCpf, exData, exDesc, exObs;
+    TextView exNome, exTelefone, exEmail, exCpf, exData, exDesc, exObs, tvIdModel2;
     Cursor cursor;
     BancoController crud;
     String codigo;
-    ImageButton ibVoltar;
+    ImageView ibVoltar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exibe_contato);
 
-        ibVoltar = (ImageButton) findViewById(R.id.ibVoltar);
+        ibVoltar = (ImageView) findViewById(R.id.ibVoltar);
 
         codigo = this.getIntent().getStringExtra("codigo");
         crud = new BancoController(getBaseContext());
@@ -34,6 +35,7 @@ public class ExibeContato extends Activity {
         exData = (TextView) findViewById(R.id.txvExDATA);
         exDesc = (TextView) findViewById(R.id.txvExDescricao);
         exObs = (TextView) findViewById(R.id.txvExObs);
+        tvIdModel2 = findViewById(R.id.tvIdModel2);
 
         cursor = crud.carregaDadoById(Integer.parseInt(codigo));
         exNome.setText(cursor.getString(cursor.getColumnIndexOrThrow(DBTableConfig.Columns.NOME)));
@@ -43,6 +45,8 @@ public class ExibeContato extends Activity {
         exDesc.setText(cursor.getString(cursor.getColumnIndexOrThrow(DBTableConfig.Columns.DES)));
         exEmail.setText(cursor.getString(cursor.getColumnIndexOrThrow(DBTableConfig.Columns.EMAIL)));
         exObs.setText(cursor.getString(cursor.getColumnIndexOrThrow(DBTableConfig.Columns.OBS)));
+        tvIdModel2.setText(cursor.getString(cursor.getColumnIndexOrThrow(DBTableConfig.Columns.ID)));
+
 
     }
 
