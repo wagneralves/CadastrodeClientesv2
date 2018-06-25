@@ -1,0 +1,625 @@
+
+
+Sat Jun  6 21:08:39 2015
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.0.4-301.fc22.x86_64 (#1 SMP Thu May 21 13:10:33 UTC 2015) x86_64
+Compiler: GCC 5.0
+Compilation date: 2015-04-24T07:22:29
+ext2fs lib: 1.42.12, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: 20140608, curses lib: ncurses 5.9
+/dev/sda: LBA, LBA48, DCO support
+/dev/sda: size       625142448 sectors
+/dev/sda: user_max   625142448 sectors
+/dev/sda: dco        625142448 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+/dev/mapper/fedora-home: LBA, LBA48, DCO support
+/dev/mapper/fedora-home: size       483606528 sectors
+/dev/mapper/fedora-home: user_max   625142448 sectors
+/dev/mapper/fedora-home: dco        625142448 sectors
+/dev/mapper/fedora-root: LBA, LBA48, DCO support
+/dev/mapper/fedora-root: size       136314880 sectors
+/dev/mapper/fedora-root: user_max   625142448 sectors
+/dev/mapper/fedora-root: dco        625142448 sectors
+/dev/mapper/fedora-swap: LBA, LBA48, DCO support
+/dev/mapper/fedora-swap: size       4186112 sectors
+/dev/mapper/fedora-swap: user_max   625142448 sectors
+/dev/mapper/fedora-swap: dco        625142448 sectors
+/dev/dm-0: LBA, LBA48, DCO support
+/dev/dm-0: size       4186112 sectors
+/dev/dm-0: user_max   625142448 sectors
+/dev/dm-0: dco        625142448 sectors
+/dev/dm-1: LBA, LBA48, DCO support
+/dev/dm-1: size       136314880 sectors
+/dev/dm-1: user_max   625142448 sectors
+/dev/dm-1: dco        625142448 sectors
+/dev/dm-2: LBA, LBA48, DCO support
+/dev/dm-2: size       483606528 sectors
+/dev/dm-2: user_max   625142448 sectors
+/dev/dm-2: dco        625142448 sectors
+Hard disk list
+Disk /dev/sda - 320 GB / 298 GiB - CHS 38913 255 63, sector size=512 - ST320LT007-9ZV142, S/N:W0Q43NFF, FW:0005HPM1
+Disk /dev/mapper/fedora-home - 247 GB / 230 GiB - 483606528 sectors, sector size=512 - ST320LT007-9ZV142, S/N:W0Q43NFF, FW:0005HPM1
+Disk /dev/mapper/fedora-root - 69 GB / 65 GiB - 136314880 sectors, sector size=512 - ST320LT007-9ZV142, S/N:W0Q43NFF, FW:0005HPM1
+Disk /dev/mapper/fedora-swap - 2143 MB / 2044 MiB - 4186112 sectors, sector size=512 - ST320LT007-9ZV142, S/N:W0Q43NFF, FW:0005HPM1
+Disk /dev/dm-0 - 2143 MB / 2044 MiB - 4186112 sectors, sector size=512 - ST320LT007-9ZV142, S/N:W0Q43NFF, FW:0005HPM1
+Disk /dev/dm-1 - 69 GB / 65 GiB - 136314880 sectors, sector size=512 - ST320LT007-9ZV142, S/N:W0Q43NFF, FW:0005HPM1
+Disk /dev/dm-2 - 247 GB / 230 GiB - 483606528 sectors, sector size=512 - ST320LT007-9ZV142, S/N:W0Q43NFF, FW:0005HPM1
+
+Partition table type (auto): Intel
+Disk /dev/sda - 320 GB / 298 GiB - ST320LT007-9ZV142
+Partition table type: Intel
+
+Analyse Disk /dev/sda - 320 GB / 298 GiB - CHS 38913 255 63
+Geometry from i386 MBR: head=255 sector=63
+
+LVM2 magic value at 63/221/31
+Current partition structure:
+ 1 * Linux                    0  32 33    63 221 30    1024000
+ 2 P Linux LVM               63 221 31 38913  70  5  624115712
+
+search_part()
+Disk /dev/sda - 320 GB / 298 GiB - CHS 38913 255 63
+
+recover_EXT2: s_block_group_nr=0/62, s_mnt_count=25/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 33    63 221 30    1024000
+     ext4 blocksize=1024 Sparse_SB Recover, 524 MB / 500 MiB
+
+LVM2 magic value at 63/221/31
+part_size 624115712
+     Linux LVM               63 221 31 38913  70  5  624115712
+     LVM2, 319 GB / 297 GiB
+
+Results
+   * Linux                    0  32 33    63 221 30    1024000
+     ext4 blocksize=1024 Sparse_SB Recover, 524 MB / 500 MiB
+   P Linux LVM               63 221 31 38913  70  5  624115712
+     LVM2, 319 GB / 297 GiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 1024000 linear /dev/sda 2048" | dmsetup create test0
+echo "0 624115712 linear /dev/sda 1026048" | dmsetup create test1
+
+interface_write()
+ 1 * Linux                    0  32 33    63 221 30    1024000
+ 2 P Linux LVM               63 221 31 38913  70  5  624115712
+
+search_part()
+Disk /dev/sda - 320 GB / 298 GiB - CHS 38913 255 63
+
+recover_EXT2: s_block_group_nr=0/62, s_mnt_count=25/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 33    63 221 30    1024000
+     ext4 blocksize=1024 Sparse_SB Recover, 524 MB / 500 MiB
+
+block_group_nr 1
+
+recover_EXT2: "e2fsck -b 8193 -B 1024 device" may be needed
+recover_EXT2: s_block_group_nr=1/62, s_mnt_count=0/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 31    63 221 28    1024000
+     ext4 blocksize=1024 Sparse_SB Backup_SB, 524 MB / 500 MiB
+
+block_group_nr 3
+
+recover_EXT2: "e2fsck -b 24577 -B 1024 device" may be needed
+recover_EXT2: s_block_group_nr=3/62, s_mnt_count=0/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 31    63 221 28    1024000
+     ext4 blocksize=1024 Sparse_SB Backup_SB, 524 MB / 500 MiB
+
+block_group_nr 5
+
+recover_EXT2: "e2fsck -b 40961 -B 1024 device" may be needed
+recover_EXT2: s_block_group_nr=5/62, s_mnt_count=0/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 31    63 221 28    1024000
+     ext4 blocksize=1024 Sparse_SB Backup_SB, 524 MB / 500 MiB
+
+block_group_nr 7
+
+recover_EXT2: "e2fsck -b 57345 -B 1024 device" may be needed
+recover_EXT2: s_block_group_nr=7/62, s_mnt_count=0/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 31    63 221 28    1024000
+     ext4 blocksize=1024 Sparse_SB Backup_SB, 524 MB / 500 MiB
+
+block_group_nr 9
+
+recover_EXT2: "e2fsck -b 73729 -B 1024 device" may be needed
+recover_EXT2: s_block_group_nr=9/62, s_mnt_count=0/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 31    63 221 28    1024000
+     ext4 blocksize=1024 Sparse_SB Backup_SB, 524 MB / 500 MiB
+
+block_group_nr 25
+
+recover_EXT2: "e2fsck -b 204801 -B 1024 device" may be needed
+recover_EXT2: s_block_group_nr=25/62, s_mnt_count=0/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 31    63 221 28    1024000
+     ext4 blocksize=1024 Sparse_SB Backup_SB, 524 MB / 500 MiB
+
+block_group_nr 27
+
+recover_EXT2: "e2fsck -b 221185 -B 1024 device" may be needed
+recover_EXT2: s_block_group_nr=27/62, s_mnt_count=0/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 31    63 221 28    1024000
+     ext4 blocksize=1024 Sparse_SB Backup_SB, 524 MB / 500 MiB
+
+block_group_nr 49
+
+recover_EXT2: "e2fsck -b 401409 -B 1024 device" may be needed
+recover_EXT2: s_block_group_nr=49/62, s_mnt_count=0/4294967295, s_blocks_per_group=8192, s_inodes_per_group=2032
+recover_EXT2: s_blocksize=1024
+recover_EXT2: s_blocks_count 512000
+recover_EXT2: part_size 1024000
+     Linux                    0  32 31    63 221 28    1024000
+     ext4 blocksize=1024 Sparse_SB Backup_SB, 524 MB / 500 MiB
+
+LVM2 magic value at 63/221/31
+part_size 624115712
+     Linux LVM               63 221 31 38913  70  5  624115712
+     LVM2, 319 GB / 297 GiB
+
+recover_EXT2: s_block_group_nr=0/1844, s_mnt_count=25/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+
+block_group_nr 1
+
+recover_EXT2: "e2fsck -b 32768 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=1/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 3
+
+recover_EXT2: "e2fsck -b 98304 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=3/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 5
+
+recover_EXT2: "e2fsck -b 163840 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=5/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+recover_EXT2: s_block_group_nr=0/4, s_mnt_count=8/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                  158 214 57   228 244 16    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 576 MB / 550 MiB
+
+block_group_nr 7
+
+recover_EXT2: "e2fsck -b 229376 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=7/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 9
+
+recover_EXT2: "e2fsck -b 294912 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=9/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 25
+
+recover_EXT2: "e2fsck -b 819200 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=25/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 27
+
+recover_EXT2: "e2fsck -b 884736 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=27/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 49
+
+recover_EXT2: "e2fsck -b 1605632 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=49/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 81
+
+recover_EXT2: "e2fsck -b 2654208 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=81/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 125
+
+recover_EXT2: "e2fsck -b 4096000 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=125/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+FAT32 at 3185/198/22
+FAT1 : 32-1619
+FAT2 : 1620-3207
+start_rootdir : 3208 root cluster : 2
+Data : 3208-204799
+sectors : 204800
+cluster_size : 1
+no_of_cluster : 201592 (2 - 201593)
+fat_length 1588 calculated 1575
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 9 (FAT) != 63 (HD)
+set_FAT_info: name from BS used
+
+FAT32 at 3185/198/22
+     FAT32 LBA             3185 198 22  3198 134  8     204800 [SDCARD]
+     FAT32, blocksize=512, 104 MB / 100 MiB
+FAT32 at 3185/198/28
+FAT1 : 32-1619
+FAT2 : 1620-3207
+start_rootdir : 3208 root cluster : 2
+Data : 3208-204799
+sectors : 204800
+cluster_size : 1
+no_of_cluster : 201592 (2 - 201593)
+fat_length 1588 calculated 1575
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 9 (FAT) != 63 (HD)
+set_FAT_info: name from BS used
+
+FAT32 at 3185/198/28
+     FAT32 LBA             3185 198 22  3198 134  8     204800 [SDCARD]
+     FAT32, blocksize=512, 104 MB / 100 MiB
+
+block_group_nr 1
+
+recover_EXT2: "e2fsck -b 32768 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=1/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                 3213  80  4  3283 109 26    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 576 MB / 550 MiB
+
+block_group_nr 3
+
+recover_EXT2: "e2fsck -b 98304 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=3/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                 3214  85  8  3284 114 30    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 576 MB / 550 MiB
+
+recover_EXT2: s_block_group_nr=0/0, s_mnt_count=4/4294967295, s_blocks_per_group=32768, s_inodes_per_group=4224
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 16896
+recover_EXT2: part_size 135168
+     Linux                 3284 179 32  3293  30  1     135168
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 69 MB / 66 MiB
+
+recover_EXT2: s_block_group_nr=0/4, s_mnt_count=4/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                 3285 184 36  3355 213 58    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 576 MB / 550 MiB
+
+block_group_nr 1
+
+recover_EXT2: "e2fsck -b 32768 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=1/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                 3285 184 36  3355 213 58    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 576 MB / 550 MiB
+
+block_group_nr 3
+
+recover_EXT2: "e2fsck -b 98304 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=3/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                 3285 184 36  3355 213 58    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 576 MB / 550 MiB
+
+recover_EXT2: s_block_group_nr=0/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                 3358  34  5  3428  63 27    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB, 576 MB / 550 MiB
+
+block_group_nr 1
+
+recover_EXT2: "e2fsck -b 32768 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=1/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                 3358  34  5  3428  63 27    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 576 MB / 550 MiB
+
+block_group_nr 3
+
+recover_EXT2: "e2fsck -b 98304 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=3/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                 3358  34  5  3428  63 27    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 576 MB / 550 MiB
+
+block_group_nr 243
+
+recover_EXT2: "e2fsck -b 7962624 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=243/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 343
+
+recover_EXT2: "e2fsck -b 11239424 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=343/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+block_group_nr 625
+
+recover_EXT2: "e2fsck -b 20480000 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=625/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+recover_EXT2: s_block_group_nr=0/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                11640  99 44 11710 129  3    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB, 576 MB / 550 MiB
+
+recover_EXT2: s_block_group_nr=0/5, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 192000
+recover_EXT2: part_size 1536000
+     Linux                11660 200 61 11756 101 57    1536000
+     ext4 blocksize=4096 Large_file Sparse_SB, 786 MB / 750 MiB
+
+block_group_nr 1
+
+recover_EXT2: "e2fsck -b 32768 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=1/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                11662 211  6 11732 240 28    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 576 MB / 550 MiB
+
+block_group_nr 1
+
+recover_EXT2: "e2fsck -b 32768 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=1/5, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 192000
+recover_EXT2: part_size 1536000
+     Linux                11691  97 55 11786 253 51    1536000
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 786 MB / 750 MiB
+
+block_group_nr 3
+
+recover_EXT2: "e2fsck -b 98304 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=3/4, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=7040
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 140800
+recover_EXT2: part_size 1126400
+     Linux                11718 234 37 11789   8 59    1126400
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 576 MB / 550 MiB
+
+block_group_nr 3
+
+recover_EXT2: "e2fsck -b 98304 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=3/5, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 192000
+recover_EXT2: part_size 1536000
+     Linux                11733  50 30 11828 206 26    1536000
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 786 MB / 750 MiB
+
+block_group_nr 5
+
+recover_EXT2: "e2fsck -b 163840 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=5/5, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 192000
+recover_EXT2: part_size 1536000
+     Linux                11764 207 28 11860 108 24    1536000
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 786 MB / 750 MiB
+
+block_group_nr 729
+
+recover_EXT2: "e2fsck -b 23887872 -B 4096 device" may be needed
+recover_EXT2: s_block_group_nr=729/1844, s_mnt_count=0/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                   63 253 63 30167  28  5  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Backup_SB, 247 GB / 230 GiB
+
+recover_EXT2: s_block_group_nr=0/320, s_mnt_count=141/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 10485760
+recover_EXT2: part_size 83886080
+     Linux                14166 244 31 19388 159 35   83886080
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 42 GB / 40 GiB
+
+recover_EXT2: s_block_group_nr=0/320, s_mnt_count=141/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 10485760
+recover_EXT2: part_size 83886080
+     Linux                14167  54 32 19388 224 36   83886080
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 42 GB / 40 GiB
+
+recover_EXT2: s_block_group_nr=0/320, s_mnt_count=140/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 10485760
+recover_EXT2: part_size 83886080
+     Linux                14168 124 37 19390  39 41   83886080
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 42 GB / 40 GiB
+
+recover_EXT2: s_block_group_nr=0/320, s_mnt_count=140/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 10485760
+recover_EXT2: part_size 83886080
+     Linux                14171 107 17 19393  22 21   83886080
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 42 GB / 40 GiB
+
+recover_EXT2: s_block_group_nr=0/320, s_mnt_count=140/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 10485760
+recover_EXT2: part_size 83886080
+     Linux                14172 209 54 19394 124 58   83886080
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 42 GB / 40 GiB
+
+recover_EXT2: s_block_group_nr=0/320, s_mnt_count=140/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 10485760
+recover_EXT2: part_size 83886080
+     Linux                14173 117 25 19395  32 29   83886080
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 42 GB / 40 GiB
+
+recover_EXT2: s_block_group_nr=0/320, s_mnt_count=132/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 10485760
+recover_EXT2: part_size 83886080
+     Linux                14174 154 61 19396  70  2   83886080
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 42 GB / 40 GiB
+
+recover_EXT2: s_block_group_nr=0/1844, s_mnt_count=25/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                14962 114  1 45065 143  6  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+This partition ends after the disk limits. (start=240371712, size=483606528, end=723978239, disk end=625142448)
+
+recover_EXT2: s_block_group_nr=0/1844, s_mnt_count=25/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                14962 146 33 45065 175 38  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+This partition ends after the disk limits. (start=240373760, size=483606528, end=723980287, disk end=625142448)
+
+recover_EXT2: s_block_group_nr=0/1844, s_mnt_count=25/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                14962 179  2 45065 208  7  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+This partition ends after the disk limits. (start=240375808, size=483606528, end=723982335, disk end=625142448)
+
+recover_EXT2: s_block_group_nr=0/1844, s_mnt_count=25/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 60450816
+recover_EXT2: part_size 483606528
+     Linux                14977 124 60 45080 154  2  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+This partition ends after the disk limits. (start=240613376, size=483606528, end=724219903, disk end=625142448)
+
+XFS Marker at 18146/79/46
+
+recover_xfs
+     Linux                18146  79 46 18210  13 43    1024000
+     XFS 6.2+ - bitmap version blocksize=4096, 524 MB / 500 MiB
+
+XFS Marker at 18635/182/44
+
+recover_xfs
+     Linux                18635 182 44 18699 116 41    1024000
+     XFS 6.2+ - bitmap version blocksize=4096, 524 MB / 500 MiB
+     Linux Swap           30167  28  6 30427 174  3    4186096
+     SWAP2 version 1, pagesize=4096, 2143 MB / 2043 MiB
+Search for partition aborted
+Disk /dev/sda - 320 GB / 298 GiB - CHS 38913 255 63
+Check the harddisk size: HD jumpers settings, BIOS detection...
+The harddisk (320 GB / 298 GiB) seems too small! (< 370 GB / 345 GiB)
+The following partitions can't be recovered:
+     Linux                14962 114  1 45065 143  6  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+     Linux                14962 146 33 45065 175 38  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+     Linux                14962 179  2 45065 208  7  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+     Linux                14977 124 60 45080 154  2  483606528
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 247 GB / 230 GiB
+SIGINT detected! TestDisk has been killed.
