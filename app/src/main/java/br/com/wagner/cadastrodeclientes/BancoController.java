@@ -25,6 +25,7 @@ class BancoController {
 
         db = banco.getWritableDatabase();
         valores = new ContentValues();
+
         valores.put(DBTableConfig.Columns.NOME, nome);
         valores.put(DBTableConfig.Columns.TEL, telefone);
         valores.put(DBTableConfig.Columns.CPF, cpf);
@@ -98,7 +99,5 @@ class BancoController {
         db.delete(TABELA,where,null);
         db.close();
     }
-
-
 
 }

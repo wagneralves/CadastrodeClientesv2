@@ -66,6 +66,7 @@ public class InsereDado extends Activity {
 
 
     public void CadastrarClick(View v) {
+
         BancoController crud = new BancoController(getBaseContext());
         txtNome = (EditText) findViewById(R.id.txtNome);
         txtDescricao = (EditText) findViewById(R.id.txtDescricao);
@@ -84,11 +85,12 @@ public class InsereDado extends Activity {
         String obsString = edtObs.getText().toString();
         String resultado;
 
-        resultado = crud.insereDado(nomeString,telefoneString,cpfString,dataString,descricaoString,emailString,obsString);
+        try {
+            resultado = crud.insereDado(nomeString, telefoneString, cpfString, dataString, descricaoString, emailString, obsString);
 
-        Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
-        chamaListar();
-
+            Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+            chamaListar();
+        }catch(Exception erro){mensagemExibir("erro","Erro ao manipular banco de dados" + erro.getMessage() );}
     }
 
     //Mensagem para exibir exceções com parametros
@@ -98,7 +100,6 @@ public class InsereDado extends Activity {
         mensagem.setMessage(texto);
         mensagem.setNeutralButton(getString(R.string.javaOK), null);
         mensagem.show();
-
     }
 
     public void ListaClientes(View v){
