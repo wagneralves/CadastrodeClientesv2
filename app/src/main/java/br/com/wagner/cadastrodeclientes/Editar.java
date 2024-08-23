@@ -1,5 +1,7 @@
 package br.com.wagner.cadastrodeclientes;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -9,13 +11,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
 
@@ -92,8 +95,7 @@ public class Editar extends AppCompatActivity {
             cmonth = monthOfYear + 1;
             cyear = year;
 
-            display.setText(cday + "/" + cmonth + "/"
-                    + cyear);
+            display.setText(cday + "/" + cmonth + "/" + cyear);
         }
     };
 

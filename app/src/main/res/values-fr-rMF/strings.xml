@@ -12,7 +12,7 @@
     <string name="txvDescricaoModel">Small Text</string>
     <string name="tvLIstarTitulo">Clients</string>
     <string name="tvInserir_Titulo">Insérer des clients</string>
-    <string name="tvSobreTitulo">Enregistrement du client 3.0</string>
+    <string name="tvSobreTitulo">Enregistrement du client 4.0</string>
     <string name="tvSobreCopyRight">Copyrigh © Wagner Alves</string>
     <string name="tvSobreDireitos">Tous droits réservés.</string>
     <string name="tvDoacoesTitulo">Merci!</string>
@@ -30,10 +30,10 @@
     <string name="javaDesejaApagarCliente">Voulez-vous supprimer ce client?</string>
     <string name="javaNao">ne pas</string>
     <string name="javaSim">Oui</string>
-    <string name="javaClienteDeletadoSucesso">"Client supprimé avec succès! "</string>
+    <string name="javaClienteDeletadoSucesso">Client supprimé avec succès! </string>
     <string name="JavaFalhaDeletarClientes">Échec de la suppression des clients</string>
-    <string name="javaVadastradoSucesso">" Enregistré avec succès."</string>
-    <string name="javaFalhaCadastrar">Échec de l\'inscription des clients</string>
+    <string name="javaVadastradoSucesso">"Enregistré avec succès."</string>
+    <string name="javaFalhaCadastrar">Échec de Inscription des clients</string>
     <string name="javaDesejaApagarTodos">Voulez-vous supprimer tous les clients?</string>
     <string name="javaClientesDeletadosSucesso">"Les clients ont bien été supprimés! "</string>
     <string name="javaFalhaApagarTodos">Échec de la suppression de tous les clients</string>
@@ -43,7 +43,7 @@
     <string name="javaDesejaRestaurarBackup">Voulez-vous restaurer tous les clients?</string>
     <string name="javaRestoreSucesso">Restaurer fait avec succès!</string>
     <string name="javaFalhaRestore">"Échec de la restauration, veuillez indiquer au développeur: wagner.alves.it@gmail.com "</string>
-    <string name="javaTituloCompartilhar">Téléchargement gratuit de l\'application d'inscription à la clientèle</string>
+    <string name="javaTituloCompartilhar">Téléchargement gratuit de l\'application dinscription à la clientèle</string>
     <string name="javaCompartilhar">Partagez ça</string>
     <string name="CPFHINT">CPF:</string>
     <string name="todo">Tout</string>

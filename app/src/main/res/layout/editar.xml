@@ -1,10 +1,10 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
 
     <TextView
         android:id="@+id/txvDate"
@@ -41,8 +41,6 @@
         android:ems="10"
         android:hint="@string/TXTTelefoneCadastro"
         android:inputType="number|phone"
-        android:numeric="integer"
-        android:phoneNumber="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNome" />
@@ -57,7 +55,6 @@
         android:hint="@string/CPFHINT"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
@@ -98,16 +95,12 @@
         app:layout_constraintEnd_toStartOf="@+id/txvDate"
         app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
-        android:baselineAligned="false"
-        android:gravity="top"
-        android:weightSum="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -165,9 +158,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
         android:id="@+id/edtObs"
@@ -183,4 +174,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDescricao" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
     <string name="txvDescricaoModel">Small Text</string>
     <string name="tvLIstarTitulo">Clientes</string>
     <string name="tvInserir_Titulo">Inserir Clientes</string>
-    <string name="tvSobreTitulo">Cadastro de Clientes 3.0</string>
+    <string name="tvSobreTitulo">Cadastro de Clientes 4.0</string>
     <string name="tvSobreCopyRight">Copyrigh © Wagner Alves</string>
     <string name="tvSobreDireitos">Todos os Direitos Reservados</string>
     <string name="tvDoacoesTitulo">Obrigado!</string>
@@ -48,4 +48,6 @@
     <string name="CPFHINT">CPF:</string>
     <string name="todo">TODO</string>
     <string name="obs">Observações</string>
+    <string name="javaToqueSair">Sair</string>
+    <string name="javaPressioneParaSair">Sair</string>
 </resources>

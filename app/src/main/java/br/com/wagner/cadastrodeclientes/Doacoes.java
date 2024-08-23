@@ -5,11 +5,9 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Doacoes extends Activity {
@@ -21,85 +19,51 @@ public class Doacoes extends Activity {
     Intent it;
     String bitCoin, dogeCoin, ethCoin;
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doacoes);
 
         wvPaypal = (WebView) findViewById(R.id.wvPaypal);
         wvPaypal.getSettings().setJavaScriptEnabled(true);
-
         wvPaypal.loadUrl("file:///android_asset/index.html");
 
         wvPagSeguro = (WebView) findViewById(R.id.wvPagSeguro);
         wvPagSeguro.getSettings().setJavaScriptEnabled(true);
-
-        wvPaypal.loadUrl("file:///android_asset/index.html");
         wvPagSeguro.loadUrl("file:///android_asset/index2.html");
+
         ivBit = findViewById(R.id.ivBit);
         ivDoge = findViewById(R.id.ivDoge);
         ivEth = findViewById(R.id.ivEth);
 
-
-        bitCoin = "1DXWX9oA3PAgqTkuzfJEFX5mshSvCYsn6i";
-        dogeCoin = "DHQ9uFbUCubn82zXcaxVC1TQ3zhpQ9u4U2";
-        ethCoin = "0x4Ff98202D5fe16703486cDc456cC95A8309d73fe";
+        bitCoin = "13vnB91yHF1ofUYK37rxNkZZNWjBeUTwTz";
+        dogeCoin = "DMkKUHaVkd8ZMFmHi4To36uHqWy2xrpCEn";
+        ethCoin = "0x048531d1301884c56800ec7882441f13aedc0769";
 
         myClipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-
-
     }
 
-    public void copiar(View view){
+    public void copiar(View view) {
+        String text = "";
+        int id = view.getId();
 
-        switch (view.getId()){
+        if (id == R.id.ivBit) {
+            text = bitCoin;
+        } else if (id == R.id.ivDoge) {
+            text = dogeCoin;
+        } else if (id == R.id.ivEth) {
+            text = ethCoin;
+        }
 
-            case (R.id.ivBit):
-                String text;
-                text = bitCoin;//.getText().toString()
-                myClip = ClipData.newPlainText("text", text);
-                myClipboard.setPrimaryClip(myClip);
-                Toast.makeText(getApplicationContext(), "Text Copied",
-                        Toast.LENGTH_SHORT).show();
-                break;
-            case (R.id.ivDoge):
-                String doge;
-                doge = dogeCoin;//.getText().toString()
-                myClip = ClipData.newPlainText("text", doge);
-                myClipboard.setPrimaryClip(myClip);
-                Toast.makeText(getApplicationContext(), "Text Copied",
-                        Toast.LENGTH_SHORT).show();
-                break;
-            case (R.id.ivEth):
-                String eth;
-                eth = ethCoin;//.getText().toString()
-                myClip = ClipData.newPlainText("text", eth);
-                myClipboard.setPrimaryClip(myClip);
-                Toast.makeText(getApplicationContext(), "Text Copied",
-                        Toast.LENGTH_SHORT).show();
-                break;
+        if (!text.isEmpty()) {
+            ClipData myClip = ClipData.newPlainText("text", text);
+            myClipboard.setPrimaryClip(myClip);
+            Toast.makeText(getApplicationContext(), "Text Copied", Toast.LENGTH_SHORT).show();
         }
     }
-
-    //  ivBit.setOnClickListener(new View.OnClickListener() {
-
-    //      @Override
-    //      public void onClick(View v) {
-    //
-    //      }
-    //  });
-
-
-
-
-
 
     public void Obrigado(View v) {
         it = new Intent(getBaseContext(), ListarActivity.class);
         startActivity(it);
-
     }
-
-
-
-
 }

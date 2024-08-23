@@ -1,4 +1,5 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout2"
@@ -6,15 +7,11 @@
     android:layout_height="match_parent"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
-        android:baselineAligned="false"
-        android:gravity="top"
-        android:weightSum="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -58,7 +55,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
         android:id="@+id/txtNome"
@@ -67,14 +64,10 @@
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:autoText="false"
-        android:capitalize="words"
-        android:elegantTextHeight="true"
         android:ems="10"
         android:hint="@string/txtNomeCadastro"
         android:inputType="textCapWords|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
@@ -88,8 +81,6 @@
         android:ems="10"
         android:hint="@string/TXTTelefoneCadastro"
         android:inputType="number|phone"
-        android:numeric="integer"
-        android:phoneNumber="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNome" />
@@ -121,7 +112,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
-
     <EditText
         android:id="@+id/txtDescricao"
         android:layout_width="0dp"
@@ -133,7 +123,6 @@
         android:hint="@string/txtDescricaoCadastro"
         android:inputType="textMultiLine|textPostalAddress"
         app:layout_constraintEnd_toStartOf="@+id/chooseDateButton"
-        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
@@ -169,10 +158,7 @@
         android:hint="@string/obs"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDescricao" />
 
-
-</android.support.constraint.ConstraintLayout>
-
+</androidx.constraintlayout.widget.ConstraintLayout>
