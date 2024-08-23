@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#81d4fa"
-    tools:context=".ListarActivity">
+    tools:context="br.com.wagner.cadastrodeclientes.ListarActivity">
 
     <include
         android:id="@+id/rcView"

@@ -1,7 +1,5 @@
 package br.com.wagner.cadastrodeclientes;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;

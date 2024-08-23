@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteCursor;
 import android.database.sqlite.SQLiteDatabase;
-import static br.com.wagner.cadastrodeclientes.DBTableConfig.TABELA;
 
 class BancoController {
 
@@ -34,7 +33,7 @@ class BancoController {
         valores.put(DBTableConfig.Columns.EMAIL, email);
         valores.put(DBTableConfig.Columns.OBS, obs);
 
-        resultado = db.insert(TABELA, null, valores);
+        resultado = db.insert(DBTableConfig.TABELA, null, valores);
         db.close();
 
         if (resultado == -1)
@@ -64,7 +63,7 @@ class BancoController {
         String[] campos =  {DBTableConfig.Columns.ID,DBTableConfig.Columns.NOME,DBTableConfig.Columns.TEL,DBTableConfig.Columns.CPF,DBTableConfig.Columns.DATA,DBTableConfig.Columns.DES,DBTableConfig.Columns.EMAIL,DBTableConfig.Columns.OBS};
         String where = DBTableConfig.Columns.ID + "=" + id;
         db = banco.getReadableDatabase();
-        cursor = db.query(TABELA,campos,where, null, null, null, null, null);
+        cursor = db.query(DBTableConfig.TABELA,campos,where, null, null, null, null, null);
 
         if(cursor!=null){
             cursor.moveToFirst();
@@ -88,7 +87,7 @@ class BancoController {
         valores.put(DBTableConfig.Columns.OBS, obs);
 
 
-        db.update(TABELA,valores,where,null);
+        db.update(DBTableConfig.TABELA,valores,where,null);
         db.close();
     }
 
@@ -96,7 +95,7 @@ class BancoController {
     public void deletaRegistro(int id){
         String where = DBTableConfig.Columns.ID + "=" + id;
         db = banco.getReadableDatabase();
-        db.delete(TABELA,where,null);
+        db.delete(DBTableConfig.TABELA,where,null);
         db.close();
     }
 

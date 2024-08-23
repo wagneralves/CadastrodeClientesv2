@@ -12,7 +12,7 @@
         android:icon="@drawable/icone"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListarActivity"
+        <activity android:name="br.com.wagner.cadastrodeclientes.ListarActivity"
             android:label="@string/app_name"
             android:exported="true">
             <intent-filter>
@@ -20,13 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InsereDado"></activity>
-        <activity android:name=".Doacoes"></activity>
-        <activity android:name=".Editar"></activity>
+        <activity android:name="br.com.wagner.cadastrodeclientes.InsereDado"></activity>
+        <activity android:name="br.com.wagner.cadastrodeclientes.Doacoes"></activity>
+        <activity android:name="br.com.wagner.cadastrodeclientes.Editar"></activity>
         <activity
-            android:name=".Sobre"
+            android:name="br.com.wagner.cadastrodeclientes.Sobre"
             android:label="@string/title_activity_sobre"></activity>
-        <activity android:name=".ExibeContato"></activity>
+        <activity android:name="br.com.wagner.cadastrodeclientes.ExibeContato"></activity>
     </application>
 
 </manifest>
