@@ -4,23 +4,26 @@ plugins {
 
 android {
     namespace 'br.com.wagner.cadastrodeclientes'
-    compileSdkVersion 34 // Substitua pela versão apropriada
+    compileSdk 34 // Atualizado para a versão mais recente
+
     defaultConfig {
         applicationId "br.com.wagner.cadastrodeclientes"
-        minSdkVersion 21
-        targetSdkVersion 34
+        minSdk 21 // Verifique se o mínimo necessário para seu app
+        targetSdk 34 // Atualizado para a versão mais recente
         versionCode 16
         versionName "16.0"
     }
+
+    // Outras configurações, se necessário
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Remover duplicata
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test:runner:1.5.0'
-    androidTestImplementation 'androidx.test:rules:1.5.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test:rules:1.6.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
 }
