@@ -10,8 +10,8 @@ android {
         applicationId "br.com.wagner.cadastrodeclientes"
         minSdk 21 // Verifique se o mínimo necessário para seu app
         targetSdk 34 // Atualizado para a versão mais recente
-        versionCode 17
-        versionName "17.0"
+        versionCode 18
+        versionName "18.0"
     }
 
     // Outras configurações, se necessário
