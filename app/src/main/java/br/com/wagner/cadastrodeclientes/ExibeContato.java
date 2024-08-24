@@ -57,6 +57,11 @@ public class ExibeContato extends Activity {
 
     }
 
+    public void Sobre(View v) {
+        Intent it = new Intent(getBaseContext(), ListarActivity.class);
+        startActivity(it);
+    }
+
     private Toast toast;
     private long lastBackPressTime = 0;
 
